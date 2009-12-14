@@ -1,4 +1,6 @@
+/*.elc
 /*~
+/Makefile
 /Makefile.in
 /aclocal.m4
 /autom4te.cache
@@ -8,4 +10,3 @@
 /elc-stamp
 /install-sh
 /missing
-/*.elc
