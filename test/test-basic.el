@@ -2,8 +2,8 @@
 (load-file "../test-unit.el")
 (test-unit-clear-contexts)
 
-(context "test-unit"
-	 (tag test-unit)
+(context "basic-tests"
+	 (tag basic-tests)
 	 (specify "'test-unit provided"
 	 	  (assert-t (memq 'test-unit features)))
 
@@ -18,6 +18,6 @@
 	 	  (assert-raises error (error "you should not see this")))
 )
 
-(test-unit "test-unit")
+(test-unit "basic-tests")
 
 
