@@ -80,8 +80,18 @@
 ;; See meta.el for specifications for test-unit.el. Evaluate meta.el and
 ;; M-x specifications meta RET to see the specifications explained.
 
-(eval-when-compile (require 'cl))
+(defvar spec-count)
+(defvar spec-desc)
+(eval-when-compile 
+  (byte-compile-disable-warning 'cl-functions)
+  ;; Somehow disabling cl-functions causes the erroneous message:
+  ;;   Warning: the function `reduce' might not be defined at runtime.
+  ;; FIXME: isolate, fix and/or report back to Emacs developers a bug
+  (byte-compile-disable-warning 'unresolved)
+  (require 'cl)
+  )
 (require 'cl)
+
 
 (defvar *test-unit-contexts* '()
   "A list of contexts and their specs.")
