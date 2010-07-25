@@ -1,10 +1,12 @@
 ;;; test-unit.el --- Unit Test Framework for Emacs Lisp 
-;;; adapted from Phil Hagelberg's behave.el by rocky
+;; adapted from Phil Hagelberg's behave.el by rocky
 ;; See also Christian Ohler's ert http://github.com/ohler/ert
 
 ;; Copyright (C) 2007 Phil Hagelberg
+;; Copyright (C) 2010 Rocky Bernstein
 
 ;; Author: Phil Hagelberg
+;; Author: Rocky Bernstein
 ;; Created: 19 Jan 2007
 ;; Version: 0.1
 ;; Keywords: unit-test specification specs
@@ -79,6 +81,7 @@
 
 ;; See meta.el for specifications for test-unit.el. Evaluate meta.el and
 ;; M-x specifications meta RET to see the specifications explained.
+;;; Code:
 
 (defvar spec-count)
 (defvar spec-desc)
@@ -92,7 +95,6 @@
   )
 (require 'cl)
 
-
 (defvar *test-unit-contexts* '()
   "A list of contexts and their specs.")
 
@@ -100,7 +102,7 @@
 
 (defvar *test-unit-total-assertions* 0
   "Count of number of assertions seen since the last `test-unit-clear-contexts'"
-)
+  )
 
 (defstruct context 
   description
@@ -141,15 +143,15 @@
   (let ((fail-message (or opt-fail-message
 			  (format "assert-raises did not get expected %s" 
 				  error-condition))))
-  (list 'condition-case nil
-       (list 'progn body
-	      (list 'assert-t nil fail-message))
-     (list error-condition '(assert-t t)))))
+    (list 'condition-case nil
+	  (list 'progn body
+		(list 'assert-t nil fail-message))
+	  (list error-condition '(assert-t t)))))
 
 (defun assert-equal (expected actual &optional opt-fail-message)
   "expectation is that ACTUAL should be equal to EXPECTED."
   (if (boundp '*test-unit-total-assertions*)
-	   (incf *test-unit-total-assertions*))
+      (incf *test-unit-total-assertions*))
   (if (not (equal actual expected))
       (let* ((fail-message 
 	      (if opt-fail-message
@@ -228,7 +230,7 @@
     (with-output-to-temp-buffer "*test-unit*"
       (princ (concat "Running specs tagged \"" tags-string "\":\n\n"))
       (dolist (context (context-find-by-tags (mapcar 'intern (split-string tags-string " "))))
-	    (execute-context context))
+	(execute-context context))
       (test-unit-describe-failures failures start-time))
     (if noninteractive 
 	(progn 
@@ -287,3 +289,4 @@
     (princ (concat " * " (caddr spec) "\n"))))
 
 (provide 'test-unit)
+;;; test-unit.el ends here
