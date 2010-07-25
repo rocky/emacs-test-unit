@@ -1,4 +1,4 @@
-AC_INIT(emacs-test-unit, 0.01vc,)
+AC_INIT(emacs-test-unit, 0.01,)
 AC_CONFIG_SRCDIR(test-unit.el)
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
