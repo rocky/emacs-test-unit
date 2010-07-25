@@ -8,7 +8,8 @@
 ;; Author: Phil Hagelberg
 ;; Author: Rocky Bernstein
 ;; Created: 19 Jan 2007
-;; Version: 0.1
+;; Version: 0.01
+;; URL: http://github.com/rocky/emacs-test-unit
 ;; Keywords: unit-test specification specs
 
 ;; This file is NOT part of GNU Emacs.
