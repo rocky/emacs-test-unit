@@ -1,0 +1,59 @@
+2010-09-30  rocky <rocky@gnu.org>
+
+	Merge branch 'master' of github.com:rocky/emacs-test-unit
+
+2010-09-30  rocky <rocky@gnu.org>
+
+	* COPYING, Makefile.am: Revise COPYING to GPL2
+
+2010-08-17  R. Bernstein <rockyb@rubyforge.org>
+
+	* INSTALL: Customize more for Emacs.
+
+2010-08-17  rocky <rocky@gnu.org>
+
+	* INSTALL, configure.ac: Test Emacs version. Customize INSTALL to
+	include only relevant information.
+
+2010-08-13  R. Bernstein <rockyb@rubyforge.org>
+
+	* INSTALL: Make INSTALL less generic and more Emacs-specific
+
+2010-07-25  rocky <rocky@gnu.org>
+
+	* test-unit.el: Update meta-comment info.
+
+2010-07-25  rocky <rocky@gnu.org>
+
+	* .gitignore, ChangeLog, INSTALL, Makefile.am, README,
+	README.textile, configure.ac: Administrivia. "make distcheck" should
+	work now. README is now in textile (for github). configure.ac: Call
+	this release 0.01
+
+2010-07-25  rocky <rocky@gnu.org>
+
+	* AUTHORS, NEWS, test-unit.el: Make Emacs Lisp Package Archive
+	(ELPA) compatible.
+
+2009-12-18  rocky <rocky@gnu.org>
+
+	* autogen.sh: Add --enable-maintainer-mode.
+
+2009-12-14  R. Bernstein <rocky@gnu.org>
+
+	* .gitignore: Administrivia
+
+2009-12-14  R. Bernstein <rocky@gnu.org>
+
+	* test/test-basic.el: Small name change.
+
+2009-12-13  R. Bernstein <rocky@gnu.org>
+
+	* .gitignore, AUTHORS, COPYING, INSTALL, NEWS, README,
+	README.textile, autogen.sh, test-unit.el, test/.gitignore,
+	test/test-basic.el: Administrivia.
+
+2009-12-13  R. Bernstein <rocky@gnu.org>
+
+	* xUnit test-unit framework for Emacs.
+
