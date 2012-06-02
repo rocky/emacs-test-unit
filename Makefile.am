@@ -14,7 +14,7 @@ README: README.textile
 
 # FIGURE out how to DRY the run rules.
 test-basic.run:
-	(cd $(srcdir)/test && $(EMACS) -batch -Q -l $(@:.run=.el) )
+	(cd $(srcdir)/test && $(EMACS) -batch --no-site-file --no-splash --no-load -l $(@:.run=.el) )
 
 .PHONY: $(CHECK_FILES)
 
@@ -29,7 +29,3 @@ ACLOCAL_AMFLAGS=-I .
 endif
 
 test: check
-
-
-
-
