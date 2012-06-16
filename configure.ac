@@ -1,6 +1,6 @@
 AC_INIT(emacs-test-unit, 0.02vc,)
 AC_CONFIG_SRCDIR(test-unit.el)
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
 AM_MISSING_PROG(GIT2CL, git2cl, $missing_dir)
 
