@@ -9,9 +9,6 @@ lisp_LISP = $(lisp_files)
 
 check: $(CHECK_FILES)
 
-README: README.textile
-	cp README.textile README
-
 # FIGURE out how to DRY the run rules.
 test-basic.run:
 	(cd $(srcdir)/test && $(EMACS) -batch --no-site-file --no-splash --no-load -l $(@:.run=.el) )
